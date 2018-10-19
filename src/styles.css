@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+.artist-header{
+    padding-bottom :20px;
+    margin-bottom:30px;
+    border-bottom: 1px solid-black;
+
+}
+
+.artist-thumb{
+     width:80px;
+    height:1auto;
+    float:left; 
+    margin-bottom:10px;
+
+}
+
+.artist-album .well{
+    margin-bottom:30px;
+    overflow:hidden;
+    
+}
+
+.album{
+    text-align:center;
+    min-height:400px;
+    /* background:#333; */
+    padding: 20px;
+    /* border : #666 1px solid; */
+}
+
+.album-thumb{
+    height: 280px;
+    width: 100%;
+}
+
+.min{
+    border-bottom:#333 1px solid;
+}
+
+.jumbotron {
+    background-image: url('https://article.images.consumerreports.org/w_767,ar_32:11,c_lfill/prod/content/dam/cro/news_articles/Electronics/CR-BG-Computer-HERO-08-16') ;
+    background-size: 100%;
+    height: auto;
+}
