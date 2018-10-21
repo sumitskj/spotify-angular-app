@@ -31,7 +31,7 @@ export class SpotifyService {
      
      headers.append('Content-Type' , 'application/x-www-form-urlencoded');
 
-     return this.http.post('https://accounts.spotify.com/api/token', params , {headers : headers} )
+     return this.http.post('/token', params , {headers : headers} )
      .map(res => res.json());
   }
 
@@ -39,7 +39,7 @@ export class SpotifyService {
 
   searchMusic(str: string, type= 'artist' , token: string) {
     console.log(this.encoded);
-    this.searchUrl = 'https://api.spotify.com/v1/search?query='+str+'&offset=0&limit=20&type='+type;
+    this.searchUrl = '/v1/search?query='+str+'&offset=0&limit=20&type='+type;
     const headers = new Headers();
     headers.append('Authorization' , 'Bearer ' + token);
 
@@ -49,7 +49,7 @@ export class SpotifyService {
 
 getArtist(id: string, token: string) {
   console.log(this.encoded);
-  this.artistUrl = 'https://api.spotify.com/v1/artists/'+id;
+  this.artistUrl = '/v1/artists/'+id;
   const headers = new Headers();
   headers.append('Authorization' , 'Bearer ' + token);
 
@@ -59,7 +59,7 @@ getArtist(id: string, token: string) {
 
 getAlbums(artistid: string, token: string) {
   console.log(this.encoded);
-  this.albumsUrl = 'https://api.spotify.com/v1/artists/'+artistid+'/albums';
+  this.albumsUrl = '/v1/artists/'+artistid+'/albums';
   const headers = new Headers();
   headers.append('Authorization' , 'Bearer ' + token);
 
@@ -69,7 +69,7 @@ getAlbums(artistid: string, token: string) {
 
 getAlbum(id: string, token: string) {
   console.log(this.encoded);
-  this.albumUrl = 'https://api.spotify.com/v1/albums/'+id;
+  this.albumUrl = '/v1/albums/'+id;
   const headers = new Headers();
   headers.append('Authorization' , 'Bearer ' + token);
 
