@@ -28,7 +28,7 @@ export class SpotifyService {
 
      const headers = new Headers();
      headers.append( 'Authorization', 'Basic ' + this.encoded);
-
+     
      headers.append('Content-Type' , 'application/x-www-form-urlencoded');
 
      return this.http.post('https://accounts.spotify.com/api/token', params , {headers : headers} )
